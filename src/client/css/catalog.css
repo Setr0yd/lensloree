@@ -1,0 +1,65 @@
+/* Общая секция */
+.categories {
+  background-color: #ffffff;
+  padding: 0px 20px;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Сетка */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Карточка */
+.category-card {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Иконка */
+.category-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+/* Текст */
+.category-text {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.category-desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}

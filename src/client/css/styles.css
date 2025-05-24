@@ -1,0 +1,350 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+}
+
+*{
+  margin: 0;
+}
+.top-bar {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.top-bar__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 32px; /* ← отступы по бокам */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px; /* ← дополнительное расстояние между элементами (если нужно) */
+}
+
+.top-bar__text {
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap; /* ← не переносится */
+}
+
+.top-bar__lang {
+  font-weight: bold;
+  color: #00336a;
+  white-space: nowrap;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .top-bar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/*Работа с переключаетелем языка*/
+.language-selector {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.language-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  list-style: none;
+  padding: 4px 0;
+  display: none;
+  width: 140px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.language-dropdown li {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.language-dropdown li:hover {
+  background: #f0f0f0;
+}
+/*Работа с переключаетелем языка(конец)*/
+
+
+/*Работа с логотипом и названием*/
+
+/* Внешний фон-блок */
+.header-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 8px 0; /* верх-низ отступ, чтобы логотип не прилипал */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+/* Внутренний ограниченный контейнер */
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center; /* выравнивание по центру */
+  justify-content: space-between;
+}
+/* Логотипный блок */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+/* Картинка логотипа */
+.logo-image {
+  width: 131px; /* или 64px — зависит от твоего макета */
+  height: auto;
+  margin: -30px;
+}
+/* Название под логотипом */
+.logo-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1D4ED8;
+  line-height: 1.2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/*Работа с категорией*/                                                   
+.element_category{
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.elements{
+  margin: 0 25px 0 0;
+  align-items: center;
+}
+.support_nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.support-icon{
+  width: 50px; 
+  height: auto;
+}
+.Data{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 0 0 5px;
+  font-family: I, sans-serif;
+}
+
+/* Синий bar */
+.blue-bar{
+  width: 100%;
+  background-color: #1D4ED8; /* синий из макета */
+}
+.blue-bar_inner{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/*Catalog blue-bar*/
+.catalog-dropdown {
+  width: 320px;
+  position: relative;
+  cursor: pointer;
+  background-color: #023AD9;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.burger-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 35px;
+}
+.arrow2{
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.catalog-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 320px;
+  border-radius: 4px;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.catalog-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-menu li {
+  padding: 10px 16px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.catalog-menu li:hover {
+  background-color: #f0f0f0;
+}
+/* Поиск Blue-Bar */
+.search-wrapper{
+  width: 630px;
+  height: 50px;
+  display: flex;
+  border-radius: 35px;
+  overflow: hidden;
+  background-color: white;
+}
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 0 20px;
+  font-size: 18px;
+  border-radius: 35px 0 0 35px;
+  outline: none;
+}
+.search-button {
+  width: 80px;
+  background-color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Стили для выпадающего меню профиля */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  width: 150px;
+  z-index: 1000;
+}
+
+.user-dropdown li {
+  padding: 10px;
+  color: #333;
+}
+
+.user-dropdown li:hover {
+  background-color: #f5f5f5;
+}
+
+.user-dropdown a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-actions{
+  display: flex;
+  gap: 32px;
+  color: white;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  color: white;
+}
+#iconUser {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+}
+#iconBasket {
+  width: 33px;
+  height: 33px;
+  margin-bottom: -1px;
+}
+#iconSerdce {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+#addProductIcon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/slider.css" />
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/login_modal.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Топ-бар -->
+<div class="top-bar">
+  <div class="top-bar__inner">
+    <div class="top-bar__text">Запечатлейте жизнь ярко — ваш идеальный кадр здесь!</div>
+    <div class="language-selector" id="langSelect">
+  <div class="language-selected">
+    <img src="images/Flag/flag-ru.png" alt="RU" class="flag-icon" id="currentFlag">
+    <span id="currentLang">Русский</span>
+    <span class="arrow" id="spic">&#9662;</span>
+  </div>
+  <ul class="language-dropdown" id="langDropdown">
+    <li data-lang="Русский" data-flag="images/Flag/flag-ru.png">
+      <img src="images/Flag/flag-ru.png" alt="RU" class="flag-icon"> Русский
+    </li>
+    <li data-lang="English" data-flag="images/Flag/flag-en.png">
+      <img src="images/Flag/flag-en.png" alt="EN" class="flag-icon"> English
+    </li>
+  </ul>
+</div>
+  </div>
+</div>
+<header>
+  <div class="header-wrapper">
+    <div class="header-container">
+      <div class="logo-block">
+        <img src="images/logo.png" alt="Логотип" class="logo-image" />
+        <span class="logo-title">LensLore</span>
+      </div>
+      <div class="category-nav">
+        <ul class="element_category">
+          <li class="elements">Что такое LensLore</li>
+          <li class="elements">Главная</li>
+          <li class="elements">Отзывы</li>
+          <li class="elements" id="right">Контакты</li>
+        </ul>
+      </div>
+      <div class="support_nav">
+        <img src="icons/icons_panel/material-symbols_support-agent.svg" class="support-icon"> 
+        <div class="Data_Base"></div>
+          <div class="Data">
+            <p class="paragrah">Позвоните нам: +7 (996) 509 45 71</p>
+            <p class="paragrah">aponamenko@inbox.ru</p>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <!-- Синий навигационый бар -->
+  <div class="blue-bar">
+    <div class="blue-bar_inner">
+      <!-- Каталог-блок -->
+      <div class="catalog-dropdown" id="catalogBtn">
+        <div class="catalog-header">
+          <img src="icons/BlueBar/iconamoon_menu-burger-horizontal-light.svg" alt="menu" class="burger-icon">
+          <span>Каталог</span>
+          <img  src="icons/BlueBar/strela.svg"   class="arrow2">
+        </div>
+        <div class="catalog-menu" id="catalogMenu">
+          <!-- выпадающий список -->
+          <ul>
+            <li><a href="#cat-Зеркальные">Зеркальные</a></li>
+            <li><a href="#cat-Беззеркальные">Беззеркальные</a></li>
+            <li><a href="#cat-Объективы">Объективы</a></li>
+            <li><a href="#cat-Аксессуары">Аксессуары</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Поиск...">
+        <button class="search-button">
+          <img src="icons/BlueBar/Lyppa.svg" alt="Поиск">
+        </button>
+      </div>
+      <!-- Авторизованный режим (изначально скрыт) -->
+      <div class="user-menu" id="authUserMenu" style="display: none;">
+        <div class="user-icon action-item" id="userDropdownBtn">
+          <img src="icons/BlueBar/User.svg" alt="Профиль">
+          <span>Профиль</span>
+        </div>
+        <ul class="user-dropdown" id="userDropdown">
+          <li><a href="#">Редактировать</a></li>
+          <li id="logoutBtn">Выйти</li>
+        </ul>
+      </div>
+      <!-- Гостевой режим (по умолчанию) -->
+      <div class="nav-actions">
+        <div class="action-item open-modal-btn" id="guestUserBtn">
+          <img src="icons/BlueBar/User.svg" alt="" id="iconUser">
+          <span>Войти</span>
+        </div>
+        <div class="action-item" >
+          <img src="icons/BlueBar/Basket.svg" alt="" id="iconBasket">
+          <span>Корзина</span>
+        </div>
+        <div class="action-item" >
+          <img src="icons/BlueBar/Serdce.svg" alt="" id="iconSerdce">
+          <span>Избранное</span>
+        </div>
+        <!-- 4-я иконка: добавление товара -->
+        <div class="action-item" id="addProductIcon" style="display: none;">
+          <a href="supplier-panel.html" style="text-align: center;">
+            <img src="icons/BlueBar/AddProduct.svg" alt="Добавить" style="width: 30px; height: 30px;" />
+            <span>Добавить</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="slideshow">
+  <div class="swiper slideshow-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="images/fotoapparat_kamera_vintazh_127949_1440x900.jpg" alt="Слайд 1" />
+        <div class="slide-content">
+          <h2>Профессиональные камеры и аксессуары</h2>
+          <p>Новейшие модели с доставкой по всей России</p>
+          <a href="#" class="slide-button">Смотреть каталог</a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="images/slide/10677.jpg" alt="Слайд 2" />
+        <div class="slide-content">
+          <h2>Новая коллекция — 2025</h2>
+          <p>Обновление ассортимента каждый месяц</p>
+          <a href="#" class="slide-button">Смотреть каталог</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="images/slide/59757.jpg" alt="Слайд 3" />
+        <div class="slide-content">
+          <h2>Аксессуары для любого фотоаппарата</h2>
+          <p>Штативы, флешки, зарядки и многое другое</p>
+          <a href="#" class="slide-button">Смотреть каталог</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стрелки -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Точки -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<section class="categories">
+  <div class="container">
+    <h2 class="section-title">Категории</h2>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://cdn.fotosklad.ru/upload/size_478_478/4a8/x6rb8fw8cinz01r65jt5ilpuue12sml6_thumb_74cec6cc895c056.jpg" alt="Зеркальные камеры" class="category-icon">
+        <div class="category-text">
+          <h3 class="category-name">Зеркальные камеры</h3>
+          <p class="category-desc">Canon, Nikon, Sony и др.</p>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <img src="images/" alt="Беззеркальные камеры" class="category-icon">
+        <div class="category-text">
+          <h3 class="category-name">Объективы</h3>
+          <p class="category-desc">Фиксы, зумы и портретники</p>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <img src="images/Logo.png" alt="Объективы" class="category-icon">
+        <div class="category-text">
+          <h3 class="category-name">Объективы</h3>
+          <p class="category-desc">Фиксы, зумы и портретники</p>
+        </div>
+      </div>
+      <!-- Можно добавить ещё карточки -->
+    </div>
+  </div>
+</section>
+<!-- <section class="popular-products">
+  <div class="container">
+    <h2 class="section-title">Популярные товары</h2>
+
+    <div class="product-grid">
+       Карточка товара 
+      <div class="product-card">
+        <div class="product-image-wrapper">
+          <img src="images/600x600.webp" alt="Canon EOS 250D" class="product-image" />
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Canon EOS 250D</h3>
+          <p class="product-desc">Зеркальная камера, 24 Мп</p>
+          <div class="product-bottom">
+            <span class="product-price">59 990 ₽</span>
+            <button class="product-button">В корзину</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-wrapper">
+          <img src="images/fotoapparat_kamera_vintazh_127949_1440x900.jpg" alt="Canon EOS 250D" class="product-image" />
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Canon EOS 250D</h3>
+          <p class="product-desc">Зеркальная камера, 24 Мп</p>
+          <div class="product-bottom">
+            <span class="product-price">59 990 ₽</span>
+            <button class="product-button">В корзину</button>
+          </div>
+        </div>
+      </div>
+       Можно скопировать и добавить ещё карточки 
+    </div>
+  </div>
+</section> -->
+<section id="categorySections" class="category-display"></section>
+
+
+
+
+
+
+
+
+
+<div class="modal" id="loginModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">&times;</button>
+
+    <!-- Форма входа -->
+    <div class="form-wrapper" id="loginForm">
+      <h2>Вход</h2>
+      <form id="loginFormElement">  <!-- Добавлен ID для формы -->
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Введите email" required />
+        </div>
+        <div class="input-box">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" placeholder="Введите пароль" required />
+        </div>
+        <a href="#" class="forgot">Забыли пароль?</a>
+        <button type="submit" class="login-btn">Войти</button>
+        <div class="text">
+          Нет аккаунта?
+          <a href="#" id="showSignup">Зарегистрироваться</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Форма регистрации -->
+    <div class="form-wrapper hidden" id="signupForm">
+      <h2>Регистрация</h2>
+      <form id="registerForm">  <!-- Добавлен ID для формы -->
+        <div class="input-box">
+          <label for="name">Имя</label>
+          <input type="text" id="name" placeholder="Ваше имя" required minlength="2" />
+        </div>
+        <div class="input-box">
+          <label for="email-signup">Email</label>
+          <input type="email" id="email-signup" placeholder="Введите email" required />
+          <div class="error-message" id="email-error"></div>  <!-- Добавлен блок для ошибок email -->
+        </div>
+        <div class="input-box">
+          <label for="password-signup">Пароль</label>
+          <input type="password" id="password-signup" placeholder="Создайте пароль" required minlength="6" />
+        </div>
+        <div class="input-box">
+          <label for="confirm-password">Подтвердите пароль</label>
+          <input type="password" id="confirm-password" placeholder="Повторите пароль" required />
+        </div>
+        <div class="input-box">  <!-- Добавлен выбор роли -->
+          <label for="user-role">Я хочу:</label>
+          <select id="user-role" required>
+            <option value="">Выберите роль</option>
+            <option value="user">Покупать товары</option>
+            <option value="supplier">Продавать товары</option>
+          </select>
+        </div>
+        <button type="submit" class="login-btn">Зарегистрироваться</button>
+        <div class="text">
+          Уже есть аккаунт?
+          <a href="#" id="showLogin">Войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/slider.js"></script>
+
+<!-- Форма регистрации-->
+<script src="js/auth.js"></script>
+<script src="js/lang-swither.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scroll(s).js"></script>
+<script src="js/main-page(s).js"></script>
+</html>

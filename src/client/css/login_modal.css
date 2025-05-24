@@ -1,0 +1,173 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-box {
+  position: relative;
+  width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* Остальной стиль формы (повтор из login.css) */
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #4070f4;
+}
+
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #4070f4;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  background: #4070f4;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #295edb;
+}
+
+.text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.text a {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
+
+.form-wrapper.hidden {
+  display: none;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.input-box.error .error-message {
+  display: block;
+}
+
+.input-box.error input,
+.input-box.error select {
+  border-color: #ef4444;
+}
+
+/* Стили для выпадающего списка */
+select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  background: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1em;
+}
+
+select:focus {
+  border-color: #4070f4;
+}
+.open-modal-btn {
+  cursor: pointer;
+}
+
+.action-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+#guestUserBtn {
+  pointer-events: auto;
+}
+

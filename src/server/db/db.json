@@ -1,0 +1,149 @@
+{
+  "users": [],
+  "products": [
+    {
+      "id": 1748061348236,
+      "title": "Фотоаппарат Sony ZV-E10 kit 16-50mm черный",
+      "category": "Беззеркальные",
+      "price": 104550,
+      "description": "ывавы",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/e49/e490b6ad5004f4fe1a15cf406afd33a0_thumb_74cec6cc895c056.jpg",
+      "stock": 5
+    },
+    {
+      "id": 1748069934981,
+      "title": "Беззеркальный фотоаппарат Canon EOS R6 Mark II Body",
+      "category": "Беззеркальные",
+      "price": 188089,
+      "description": "ыфв",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/faa/o03t82lelr533cvgzlyq2h3zqb5vnbgp_thumb_74cec6cc895c056.jpg",
+      "stock": 7
+    },
+    {
+      "id": 1748070151414,
+      "title": "Беззеркальный фотоаппарат Canon EOS R100 Kit RF-S 18-45 IS STM",
+      "category": "Беззеркальные",
+      "price": 59389,
+      "description": "ыв",
+      "image": "https://cdn.fotosklad.ru/upload/size_1136_1136/560/uf3xs0wq948sc1syt4ip9cevaxpl4v3j_thumb_5cac9d18490c304.png",
+      "stock": 10
+    },
+    {
+      "id": 1748070216181,
+      "title": "Беззеркальный фотоаппарат Canon EOS M50 Mark II kit EF-M 15-45mm f/3.5-6.3 IS STM черный",
+      "category": "Беззеркальные",
+      "price": 95689,
+      "description": "фыв",
+      "image": "https://cdn.fotosklad.ru/upload/size_1136_1136/924/924ef76bfa9a07f860794920844915a2_thumb_5cac9d18490c304.jpg",
+      "stock": 10
+    },
+    {
+      "id": 1748070310405,
+      "title": "Зеркальный фотоаппарат Canon EOS 4000D Kit 18-55 III",
+      "category": "Зеркальные",
+      "price": 41789,
+      "description": "вцвц",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/aaa/aaaf8d3ac584b3c29d345f02db712322_thumb_74cec6cc895c056.jpg",
+      "stock": 15
+    },
+    {
+      "id": 1748070406910,
+      "title": "Зеркальный фотоаппарат Canon EOS 2000D Kit 18-55 IS II",
+      "category": "Зеркальные",
+      "price": 42889,
+      "description": "фыв",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/4a8/x6rb8fw8cinz01r65jt5ilpuue12sml6_thumb_74cec6cc895c056.jpg",
+      "stock": 10
+    },
+    {
+      "id": 1748070452678,
+      "title": "Зеркальный фотоаппарат Canon EOS 6D Mark II Body",
+      "category": "Зеркальные",
+      "price": 148489,
+      "description": "фыв",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/2fb/2fb46a786f6ec9b99a4f447b8cd8fe27_thumb_74cec6cc895c056.jpg",
+      "stock": 5
+    },
+    {
+      "id": 1748070487534,
+      "title": "Зеркальный фотоаппарат Canon EOS 250D Kit 18-55 IS STM черный",
+      "category": "Зеркальные",
+      "price": 65989,
+      "description": "цвц",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/8c6/8c68c18db3130b38b37187603f1a81bd_thumb_74cec6cc895c056.jpg",
+      "stock": 3
+    },
+    {
+      "id": 1748070605109,
+      "title": "Клетка Smallrig 2999 для SONY A7SIII",
+      "category": "Аксессуары",
+      "price": 6284,
+      "description": "ыв",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/21b/21b21d7970665cbfceea558c275e0144_thumb_74cec6cc895c056.jpg",
+      "stock": 10
+    },
+    {
+      "id": 1748070661126,
+      "title": "Кабель JJC Cable-A (Canon RS-80N3/TC-80N3) для ПДУ WT-868",
+      "category": "Аксессуары",
+      "price": 356,
+      "description": "JJC Cable-A кабель спуска затвора фотокамер Canon (типа Canon RS-80N3) для использования с различными дистанционными пультами",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/4ce/4ced51d3de87315314b1f325cbbae6ef_thumb_74cec6cc895c056.jpg",
+      "stock": 20
+    },
+    {
+      "id": 1748070716998,
+      "title": "Пульт ДУ Fujimi FJMC-С проводной для Canon",
+      "category": "Аксессуары",
+      "price": 2100,
+      "description": "Пульт ДУ Fujimi FJMC-С проводной для Canon для цифровых и плёночных DSLR камер Canon.",
+      "image": "https://cdn.fotosklad.ru/upload/size_478_478/0de/0de7f2729b47e8579f4c90cfb70dad51_thumb_74cec6cc895c056.jpg",
+      "stock": 25
+    },
+    {
+      "id": 1748070876078,
+      "title": "Кабель Accsoon HDMI Type A – Type A",
+      "category": "Аксессуары",
+      "price": 1500,
+      "description": "цв",
+      "image": "https://cdn2.fotosklad.ru/size_478_478/193/c6ca5239b46da8d34faf0332f96d326e_thumb_74cec6cc895c056.jpg",
+      "stock": 30
+    },
+    {
+      "id": 1748071121737,
+      "title": "Sony FE 28-70mm f/2 GM Lens",
+      "category": "Объективы",
+      "price": 409990,
+      "description": "ыв",
+      "image": "https://pixel24.ru/pictures/imageSets/4d1/245/4d12456436c2774d7d5fe271d304f6a0/4d12456436c2774d7d5fe271d304f6a0.300x1.webp",
+      "stock": 2
+    },
+    {
+      "id": 1748071172655,
+      "title": "FUJIFILM XF 16-55mm f/2.8 R LM WR II Lens",
+      "category": "Объективы",
+      "price": 149990,
+      "description": "вцв",
+      "image": "https://pixel24.ru/pictures/imageSets/730/ef4/730ef4b67b2ac5460786390987ff4b41/730ef4b67b2ac5460786390987ff4b41.300x1.webp",
+      "stock": 1
+    },
+    {
+      "id": 1748071217502,
+      "title": "Объектив Canon EF 24-70mm f/2.8L II USM",
+      "category": "Объективы",
+      "price": 249990,
+      "description": "ывф",
+      "image": "https://pixel24.ru/pictures/imageSets/076/519/07651996ddcf31326fa8f4bd0ea8f4b4/07651996ddcf31326fa8f4bd0ea8f4b4.300x1.webp",
+      "stock": 1
+    },
+    {
+      "id": 1748071263638,
+      "title": "Объектив Canon EF 50mm f/1.2L USM",
+      "category": "Объективы",
+      "price": 171990,
+      "description": "ывы",
+      "image": "https://pixel24.ru/pictures/imageSets/018/da8/018da82cc985634a3b422916c3dc34cd/018da82cc985634a3b422916c3dc34cd.300x1.webp",
+      "stock": 1
+    }
+  ]
+}
