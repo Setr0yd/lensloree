@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="css/catalog.css">
   <link rel="stylesheet" href="css/product.css">
   <link rel="stylesheet" href="css/login_modal.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/product-modal.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/sticky-header.css">
   <title>Document</title>
 </head>
 <body>
@@ -87,19 +91,21 @@
           <img src="icons/BlueBar/Lyppa.svg" alt="Поиск">
         </button>
       </div>
-      <!-- Авторизованный режим (изначально скрыт) -->
-      <div class="user-menu" id="authUserMenu" style="display: none;">
-        <div class="user-icon action-item" id="userDropdownBtn">
-          <img src="icons/BlueBar/User.svg" alt="Профиль">
-          <span>Профиль</span>
-        </div>
-        <ul class="user-dropdown" id="userDropdown">
-          <li><a href="#">Редактировать</a></li>
-          <li id="logoutBtn">Выйти</li>
-        </ul>
-      </div>
-      <!-- Гостевой режим (по умолчанию) -->
       <div class="nav-actions">
+        <!-- Авторизованный режим (изначально скрыт) -->
+        <div class="user-menu" id="authUserMenu" style="display: none;">
+          <div class="user-icon action-item" id="userDropdownBtn">
+            <img src="icons/BlueBar/User.svg" alt="Профиль">
+            <span>Профиль</span>
+          </div>
+          <ul class="user-dropdown" id="userDropdown">
+            <li><a href="#">Редактировать</a></li>
+            <li id="logoutBtn">Выйти</li>
+            <li id="deleteAccountBtn">Удалить</li>
+          </ul>
+        </div>
+        <!-- Гостевой режим (по умолчанию) -->
+      
         <div class="action-item open-modal-btn" id="guestUserBtn">
           <img src="icons/BlueBar/User.svg" alt="" id="iconUser">
           <span>Войти</span>
@@ -114,8 +120,8 @@
         </div>
         <!-- 4-я иконка: добавление товара -->
         <div class="action-item" id="addProductIcon" style="display: none;">
-          <a href="supplier-panel.html" style="text-align: center;">
-            <img src="icons/BlueBar/AddProduct.svg" alt="Добавить" style="width: 30px; height: 30px;" />
+          <a href="supplier-panel.html">
+            <img src="icons/BlueBar/ri_add-large-line.svg" alt="Добавить" id="iconPluss"/>
             <span>Добавить</span>
           </a>
         </div>
@@ -248,9 +254,9 @@
     <button class="modal-close" id="closeModal">&times;</button>
 
     <!-- Форма входа -->
-    <div class="form-wrapper" id="loginForm">
+    <div class="form-wrapper" id="loginFormContainer">
       <h2>Вход</h2>
-      <form id="loginFormElement">  <!-- Добавлен ID для формы -->
+      <form id="loginForm">  <!-- Добавлен ID для формы -->
         <div class="input-box">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Введите email" required />
@@ -306,7 +312,98 @@
     </div>
   </div>
 </div>
-
+<!-- Футер -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Логотип и описание -->
+    <div class="footer-logo">
+      <div class="footer-logo-block">
+        <img src="images/logo.png" alt="Логотип" class="footer-logo-image">
+        <span class="footer-logo-title">LensLore</span>
+      </div>
+      <p class="footer-description">
+        Ваш надежный партнер в мире фототехники. Мы предлагаем широкий ассортимент камер, объективов и аксессуаров от ведущих производителей.
+      </p>
+    </div>
+    
+    <!-- Навигация -->
+    <div class="footer-nav">
+      <h3 class="footer-heading">Навигация</h3>
+      <ul class="footer-links">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    
+    <!-- Контакты -->
+    <div class="footer-contact">
+      <h3 class="footer-heading">Контакты</h3>
+      <div class="contact-item">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span class="contact-text">+7 (996 ) 509 45 71</span>
+      </div>
+      <div class="contact-item">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span class="contact-text">aponamenko@inbox.ru</span>
+      </div>
+      <div class="contact-item">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span class="contact-text">г. Волгодонск, ул. Фотографов, д. 1</span>
+      </div>
+      <div class="contact-item">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="contact-text">Пн-Пт: 9:00-20:00<br>Сб-Вс: 10:00-18:00</span>
+      </div>
+    </div>
+    
+    <!-- Социальные сети -->
+    <div class="footer-social">
+      <h3 class="footer-heading">Мы в соцсетях</h3>
+      <p>Подписывайтесь на наши социальные сети, чтобы быть в курсе новинок и акций</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <img src="icons/social/vk.svg" alt="ВКонтакте">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="icons/social/instagram.svg" alt="Instagram">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="icons/social/facebook.svg" alt="Facebook">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="icons/social/youtube.svg" alt="YouTube">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="icons/social/telegram.svg" alt="Telegram">
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Копирайт и политика -->
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2025 LensLore. Все права защищены.</div>
+    <div class="footer-policy">
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
 </body>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -318,4 +415,6 @@
 <script src="js/main.js"></script>
 <script src="js/scroll(s).js"></script>
 <script src="js/main-page(s).js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product-modal.js"></script>
 </html>

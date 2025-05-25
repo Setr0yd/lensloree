@@ -29,12 +29,15 @@ router.get('/:id', (req, res) => {
 });
 
 // Добавить товар
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const db = readDB();
+    const productData = { ...req.body };
+    
+    // Сохраняем URL изображений как есть, без скачивания
     const newProduct = {
       id: Date.now(),
-      ...req.body
+      ...productData
     };
     
     db.products.push(newProduct);
@@ -42,12 +45,13 @@ router.post('/', (req, res) => {
     
     res.status(201).json(newProduct);
   } catch (err) {
+    console.error('Ошибка при добавлении товара:', err);
     res.status(500).json({ error: 'Ошибка при добавлении' });
   }
 });
 
 // Обновить товар
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const db = readDB();
     const productId = req.params.id.toString();
@@ -57,15 +61,19 @@ router.put('/:id', (req, res) => {
       return res.status(404).json({ error: 'Товар не найден' });
     }
     
+    const productData = { ...req.body };
+    
+    // Сохраняем URL изображений как есть, без скачивания
     db.products[productIndex] = {
       ...db.products[productIndex],
-      ...req.body,
+      ...productData,
       id: db.products[productIndex].id // Сохраняем оригинальный ID
     };
     
     writeDB(db);
     res.json(db.products[productIndex]);
   } catch (err) {
+    console.error('Ошибка при обновлении товара:', err);
     res.status(500).json({ error: 'Ошибка при обновлении' });
   }
 });

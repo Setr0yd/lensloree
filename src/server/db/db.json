@@ -1,5 +1,30 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "1748145047715",
+      "name": "Рак",
+      "email": "aponamenko@inbox.ru",
+      "password": "$2b$10$6tRMEeLwLdvavp4Ge5llt.kkTIV00lyAjE3U7.GYS8tkL2rVZytbC",
+      "role": "user",
+      "createdAt": "2025-05-25T03:50:47.715Z"
+    },
+    {
+      "id": "1748147423283",
+      "name": "Витя",
+      "email": "proda@hp0",
+      "password": "$2b$10$HWbfLBAPt2Wg0ROIL8w0W.14pPqc7QmDaco/qD/Mz/2lEhZHP9RX2",
+      "role": "supplier",
+      "createdAt": "2025-05-25T04:30:23.283Z"
+    },
+    {
+      "id": "1748163584568",
+      "name": "Фатах",
+      "email": "apo@s",
+      "password": "$2b$10$fKj.xkUVbfKLTwkDt7rv2uAths5lwvoxyMafKLufnosYPz3jlGULK",
+      "role": "supplier",
+      "createdAt": "2025-05-25T08:59:44.568Z"
+    }
+  ],
   "products": [
     {
       "id": 1748061348236,
@@ -7,8 +32,14 @@
       "category": "Беззеркальные",
       "price": 104550,
       "description": "ывавы",
-      "image": "https://cdn.fotosklad.ru/upload/size_478_478/e49/e490b6ad5004f4fe1a15cf406afd33a0_thumb_74cec6cc895c056.jpg",
-      "stock": 5
+      "image": "/uploads/images/ab24f0d9-a5e7-4d0f-a2ce-62a0988aad04.jpg",
+      "stock": 5,
+      "specifications": {},
+      "additionalImages": [
+        "https://manuals.plus/wp-content/uploads/2024/09/ELBA-EUF-Q2750FFGR-Upright-Freezer-featured-1.png",
+        "https://avatars.mds.yandex.net/i?id=2c2f1e4030ede43dfc828be54292f6ef8f9393bb-4255692-images-thumbs&n=13",
+        "https://avatars.mds.yandex.net/i?id=2c2f1e4030ede43dfc828be54292f6ef8f9393bb-4255692-images-thumbs&n=13"
+      ]
     },
     {
       "id": 1748069934981,
@@ -145,5 +176,6 @@
       "image": "https://pixel24.ru/pictures/imageSets/018/da8/018da82cc985634a3b422916c3dc34cd/018da82cc985634a3b422916c3dc34cd.300x1.webp",
       "stock": 1
     }
-  ]
+  ],
+  "carts": []
 }

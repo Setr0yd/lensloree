@@ -24,7 +24,7 @@ async function renderCategories() {
         <h2 class="section-title">${category}</h2>
         <div class="product-grid">
           ${items.map(product => `
-            <div class="product-card">
+            <div class="product-card" data-id="${product.id}">
               <div class="product-image-wrapper">
                 <img src="${product.image}" alt="${product.title}" class="product-image" />
               </div>
@@ -33,7 +33,7 @@ async function renderCategories() {
                 <p class="product-desc">${product.description}</p>
                 <div class="product-bottom">
                   <span class="product-price">${product.price} ₽</span>
-                  <button class="product-button">В корзину</button>
+                  <button class="product-button" data-id="${product.id}">В корзину</button>
                 </div>
               </div>
             </div>
@@ -44,6 +44,28 @@ async function renderCategories() {
 
     container.appendChild(section);
   }
+
+  // Добавляем обработчики для кнопок "В корзину" после рендеринга
+  document.querySelectorAll('.product-button').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      
+      const productId = parseInt(btn.dataset.id);
+      if (!productId) {
+        console.error('Не удалось определить ID товара для кнопки:', btn);
+        return;
+      }
+      
+      if (window.cart) {
+        const added = await window.cart.addToCart(productId);
+        if (added) {
+          alert('Товар добавлен в корзину');
+        }
+      } else {
+        console.error('Объект корзины не найден');
+      }
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', renderCategories);

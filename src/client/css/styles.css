@@ -296,7 +296,11 @@
   z-index: 1000;
 }
 
-.user-dropdown li {
+.user-dropdown.active {
+  display: block;
+}
+
+.user-dropdown li { 
   padding: 10px;
   color: #333;
 }
@@ -340,11 +344,22 @@
   height: 20px;
   margin-bottom: 6px;
   margin-top: 6px;
+} 
+#iconPluss {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
-#addProductIcon {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 6px;
-  margin-top: 6px;
+#addProductIcon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+#addProductIcon img {
+  display: block;
 }
 
